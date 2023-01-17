@@ -1,0 +1,701 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e2131;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+#divHome {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: -1;
+  flex-direction: row;
+}
+
+#divHome.show {
+  top: 0;
+  right: 0;
+  transition: all 1s ease;
+  z-index: 10;
+}
+
+#divHome.left {
+  transform: translate(-100vw, 0);
+  transition: transform 1s ease;
+  z-index: 10;
+}
+
+#divHome > div:first-child {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1e2131;
+}
+
+#divHome > div:last-child {
+  position: absolute;
+  left: 100vw;
+  width: 10vw;
+  height: 10vh;
+}
+
+#divHome > div:last-child > button {
+  position: absolute;
+  top: 1vh;
+  width: 10vw;
+  height: 10vh;
+  border: none;
+  color: whitesmoke;
+  background-color: #1e2131;
+  border-radius: 0 5px 5px 0;
+  box-shadow: 2px 2.3px 2.5px rgb(56, 65, 68);
+}
+
+#inf {
+  display: flex;
+  margin: auto;
+  background-color: #1e2131;
+  height: 100vh;
+  width: 75vw !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.inf > div {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20vw;
+}
+
+.inf > div:last-child {
+  margin-left: 5vw;
+}
+
+.inf > div:first-child {
+  background-color: rgba(52, 38, 75, 0.096);
+  width: 22vw;
+  height: 22vw;
+  display: flex;
+  border-radius: 50%;
+}
+
+.inf > div:first-child > img {
+  position: absolute;
+  margin: auto;
+  width: 22vw;
+  height: 22vw;
+  left: -0.5vw;
+}
+
+#img1 {
+  opacity: 0%;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+#img1.is-active {
+  opacity: 100%;
+  z-index: 10;
+}
+
+#img2 {
+  opacity: 0%;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+#img2.is-active {
+  opacity: 100%;
+  z-index: 2;
+}
+
+#img3 {
+  opacity: 0%;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+#img3.is-active {
+  opacity: 100%;
+  z-index: 10;
+}
+
+#img4 {
+  opacity: 0%;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+#img4.is-active {
+  opacity: 100%;
+  z-index: 2;
+}
+
+.inf > div:first-child > svg {
+  position: absolute;
+  top: -2vh;
+  margin: auto;
+  width: 22vw;
+  height: 22vw;
+  margin-bottom: 10vh;
+}
+
+.inf.is-active > div:first-child > svg > path {
+  fill: #bc13fe;
+}
+
+.inf.is-active-1 > div:first-child > svg > path {
+  fill: #cbfe13;
+}
+
+/*Cabezera*/
+.inf > div > div {
+  background-color: #242d3a9a;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  height: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.inf.is-active > div > div {
+  background-color: #29243b;
+  margin-left: 1vw;
+}
+
+.inf.is-active-1 > div > div {
+  background-color: #243b3b0e;
+  margin-left: -20vw;
+}
+
+.inf > div > div > div {
+  background-color: #c5ae29f1;
+  width: 1.7vw;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.5vw;
+  height: 1.7vw;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.inf.is-active > div > div > div {
+  border-radius: 0;
+}
+
+.inf.is-active-1 > div > div > div {
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.inf > div > div > div:first-child {
+  background-color: #c54129f1;
+}
+
+.inf > div > div > div:last-child {
+  background-color: #4dc529f1;
+}
+
+.inf > div > p {
+  position: relative;
+  text-align: start;
+  font-weight: var(--font-semi);
+  color: whitesmoke;
+  height: auto;
+  padding: 2vh 1vw;
+  font-size: 1.2vw;
+  font-family: monospace;
+  border-radius: 5px;
+  background-color: #242d3a;
+  transition: all 0.5s ease;
+  width: 38vw;
+  border-radius: 0 0 6px 6px;
+}
+
+.inf.is-active > div > p {
+  color: #0add08;
+  margin-left: -3vw;
+  background-color: #383150;
+  font-style: oblique;
+}
+
+.inf.is-active-1 > div > p {
+  color: #dd9208;
+  margin-left: 1vw;
+  background-color: #322a4e;
+}
+
+.inf > div > p > a {
+  font-family: monospace;
+  text-decoration: none;
+  color: #008ef2;
+}
+
+.inf > div > p > a:hover {
+  color: rgb(149, 101, 189);
+}
+
+.inf.is-active > div > p > a {
+  position: absolute;
+  font-weight: 500;
+  font-style: oblique;
+  background-color: #242d3a;
+  color: #bc13fe;
+  margin-left: -25vw;
+}
+
+.inf.is-active-1 > div > p > a {
+  color: #d4c755;
+}
+
+.inf.is-active > div > p > a:last-child {
+  font-style: oblique;
+  color: #d3635b;
+}
+
+#divSkills {
+  position: absolute;
+  width: 110vw;
+  height: 100vh;
+  left: 100vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  transition: transform 1s;
+}
+
+#divSkills.show {
+  transform: translate(-100vw, 0);
+  transition: transform 1s;
+}
+
+#divSkills.left {
+  width: 100vw;
+  z-index: 5;
+  transform: translate(-200vw, 0);
+  transition: transform 1s;
+}
+
+#divSkills.rigth {
+  transform: translate(0, 0);
+  transition: transform 1s;
+  z-index: 20;
+}
+
+#divSkills > div:first-child {
+  position: absolute;
+  left: -10vw;
+  top: 12vh;
+  width: 10vw;
+  height: 10vh;
+}
+
+#divSkills > div:first-child > button {
+  width: 10vw;
+  height: 10vh;
+  border: none;
+  color: whitesmoke;
+  background-color: #483961;
+  border-radius: 5px 0 0 5px;
+}
+
+#divSkills > div:nth-child(2) {
+  width: 100vw;
+  height: 100vh;
+  background-color: #483961;
+}
+
+#divSkills > div:last-child {
+  position: absolute;
+  left: 100vw;
+  top: 12vh;
+  width: 10vw;
+  height: 10vh;
+}
+
+#divSkills > div:last-child > button {
+  width: 10vw;
+  height: 10vh;
+  border: none;
+  color: whitesmoke;
+  background-color: #483961;
+  border-radius: 0 5px 5px 0;
+}
+
+#btnskills {
+  position: absolute;
+  top: 5vh;
+  left: 39vw;
+  width: 22vw;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+#btnskills > button {
+  width: 10vw;
+  background-color: lavender;
+  border: none;
+  border-radius: 5px;
+  color: gray;
+}
+
+#btnskills > button.is-active {
+  background-color: rgb(98, 153, 72);
+  color: white;
+}
+
+.frontEnd > div:last-child {
+  position: absolute;
+  top: 25vh;
+  left: 24.5vw;
+  width: 50.2vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.frontEnd > div:last-child > div {
+  width: 16.5vw;
+  height: 10.5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.frontEnd > div:last-child > div:first-child {
+  width: 50vw;
+  height: 38.5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.frontEnd > div:last-child > div:first-child > div {
+  width: 50.2vw;
+  height: 38.5vh;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+}
+
+.frontEnd > div:last-child > div > button {
+  font-size: 1.5vw;
+  background-color: whitesmoke;
+  margin: 0;
+  height: 9.5vh;
+  text-align: center;
+  border-radius: 4px;
+  color: gray;
+}
+
+.selectFront > div:first-child {
+  display: flex;
+  width: 94%;
+  margin-top: 1vh;
+  margin-left: 3%;
+}
+
+.selectFront > div:first-child > img {
+  width: 3vw;
+}
+
+.selectFront > div:last-child > div > div > div:last-child {
+  color: rgb(238, 198, 182);
+}
+
+.selectFront > div:last-child > div > div > canvas {
+  border-radius: 5px;
+}
+
+#divProyects {
+  position: absolute;
+  width: 110vw;
+  height: 100vh;
+  left: 100vw;
+  z-index: 20;
+  display: flex;
+  flex-direction: row;
+  transition: transform 1s;
+}
+
+#divProyects.show {
+  transform: translate(-100vw, 0);
+  transition: transform 1s;
+  z-index: 1;
+}
+
+#divProyects.rigth {
+  transform: translate(0, 0);
+  transition: transform 1s;
+  z-index: 20;
+}
+
+#divProyects > div:first-child {
+  position: absolute;
+  top: 12vh;
+  left: -10vw;
+  width: 10vw;
+  height: 10vh;
+}
+
+#divProyects > div:first-child > button {
+  width: 10vw;
+  height: 10vh;
+  border: none;
+  color: whitesmoke;
+  background-color: #26293a;
+  border-radius: 5px 0 0 5px;
+  box-shadow: -2px 2.3px 2.5px rgb(56, 65, 68);
+}
+
+#divProyects > div:last-child {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle at 62.28% 119.64%,
+    #3d4363 0,
+    #3c415e 25%,
+    #2a2e44 50%,
+    #272a3b 75%,
+    #26293a 100%
+  );
+}
+
+#divProyects > div:last-child > div:first-child {
+  position: relative;
+  margin: auto;
+  top: 5vh;
+  width: 70vw;
+  height: 9vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#divProyects > div:last-child > div:first-child > button {
+  margin: auto;
+  width: 20%;
+  height: 5vh;
+  border: none;
+  color: whitesmoke;
+  border-radius: 20px;
+  background-color: rgb(148, 148, 179);
+}
+
+#divProyects > div:last-child > div:last-child > div:first-child {
+  position: absolute;
+  top: 18vh;
+  left: 30vw;
+  width: 40vw;
+  color: rgb(210, 218, 206);
+  border: none;
+  padding: 0 15px;
+  font-size: 0.8vw;
+  border-bottom-width: 1px;
+  border-bottom-color: #ee5a56;
+  border-bottom-style: ridge;
+  text-align: center;
+}
+
+#divProyects > div:last-child > div:last-child > div:nth-child(2) {
+  position: absolute;
+  top: 29vh;
+  width: 60vw;
+  left: 20vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#divProyects > div:last-child > div:last-child > div:nth-child(2) > img {
+  border-radius: 5px;
+  margin-top: 1vh;
+}
+
+.targets {
+  position: absolute;
+  width: 90vw;
+  left: 5vw;
+  top: 40vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#shadow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: -40vh;
+  left: -5vw;
+  z-index: 900;
+  background-color: #191c30c9;
+}
+
+.targets > div {
+  width: 28vw;
+  border-radius: 5px;
+  background-color: rgba(103, 103, 158, 0.329);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#target {
+  width: 52vw;
+  border-radius: 5px;
+  background-color: rgba(103, 103, 158, 0.329);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.targets > div > div {
+  margin: auto;
+  margin-top: 2vh;
+  width: 25vw;
+}
+
+#target > div {
+  margin: auto;
+  margin-top: 2vh;
+  width: 52vw;
+}
+
+.targets > div > div > img {
+  width: 25vw;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ee5b5688;
+  cursor: pointer;
+}
+
+#target > div > img {
+  width: 50vw;
+  border-radius: 5px;
+  margin-left: 1vw;
+  box-shadow: 0 0 5px #ee5b5688;
+  cursor: pointer;
+}
+
+.targets.work > div:last-child > div > img {
+  width: 13vw;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ee5b5688;
+  margin-left: 5vw;
+  cursor: pointer;
+}
+
+#target.work > div > img {
+  width: 20vw;
+  border-radius: 5px;
+  margin-left: 15vw;
+  box-shadow: 0 0 5px #ee5b5688;
+  cursor: pointer;
+}
+
+.targets > div > div > h2 {
+  font-size: 0.8vw;
+  text-align: center;
+  color: rgb(210, 218, 206);
+  text-shadow: 0 0 5px #ee5b5669;
+}
+
+#target > div > h2 {
+  font-size: 1.2vw;
+  text-align: center;
+  width: 50vw;
+  margin-left: 1vw;
+  color: rgb(210, 218, 206);
+  text-shadow: 0 0 5px #ee5b5669;
+}
+
+#numberUser {
+  position: absolute;
+  top: 86vh;
+  left: 42.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#numberUser > div {
+  width: 16vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#numberUser > div > h1:first-child {
+  width: 8vw;
+  font-size: .8vw;
+  text-align: center;
+  color: #9aa3af;
+  border-radius: 3px;
+}
+
+#numberUser > div > h1:last-child {
+  width: 8vw;
+  font-size: 1.2vw;
+  background-color: whitesmoke;
+  text-align: center;
+  color: #394555;
+  border-radius: 3px;
+}
+
+#enlace {
+  position: absolute;
+  top: 92vh;
+  left: 48.5vw;
+}
+
+#enlace > a {
+  width: 6vw;
+  text-decoration: none;
+  background-color: lavender;
+  padding: 5px 5px;
+  border-radius: 5px;
+  background-color: #ee5a56;
+  color: whitesmoke;
+}
+
+.modalCss {
+  position: absolute;
+  height: 40vh;
+  width: 50vw;
+  z-index: 999;
+  top: 15vh;
+  left: 25vw;
+}
+
+.modalCss > div > div > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalCss > div > div > div > button {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  border: none;
+  color: whitesmoke;
+  margin-bottom: 1vh;
+  background-color: #ee5a56;
+}
