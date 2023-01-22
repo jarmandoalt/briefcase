@@ -484,7 +484,7 @@ a {
 #divProyects > div:last-child > div:first-child {
   position: relative;
   margin: auto;
-  top: 5vh;
+  top: 1vh;
   width: 70vw;
   height: 9vh;
   display: flex;
@@ -504,13 +504,13 @@ a {
 
 #divProyects > div:last-child > div:last-child > div:first-child {
   position: absolute;
-  top: 18vh;
+  top: 11vh;
   left: 30vw;
   width: 40vw;
   color: rgb(210, 218, 206);
   border: none;
   padding: 0 15px;
-  font-size: 0.8vw;
+  font-size: 0.6vw;
   border-bottom-width: 1px;
   border-bottom-color: #ee5a56;
   border-bottom-style: ridge;
@@ -519,7 +519,7 @@ a {
 
 #divProyects > div:last-child > div:last-child > div:nth-child(2) {
   position: absolute;
-  top: 29vh;
+  top: 21vh;
   width: 60vw;
   left: 20vw;
   display: flex;
@@ -535,7 +535,7 @@ a {
   position: absolute;
   width: 90vw;
   left: 5vw;
-  top: 40vh;
+  top: 28vh;
   display: flex;
   justify-content: space-evenly;
 }
@@ -629,7 +629,7 @@ a {
 
 #numberUser {
   position: absolute;
-  top: 86vh;
+  top: 85vh;
   left: 42.5vw;
   display: flex;
   justify-content: center;
