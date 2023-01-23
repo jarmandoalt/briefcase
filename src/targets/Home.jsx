@@ -126,7 +126,8 @@ const Home = () => {
             <span style={{ color: "rgb(163, 96, 202)" }}></span>
             <br />
             &nbsp;&nbsp;&nbsp;name : “José Armando Altamira Martínez”, <br />
-            &nbsp;&nbsp;&nbsp;role : “Fullstack Dev”,
+            &nbsp;&nbsp;&nbsp;role : “Fullstack Dev”,<br />
+            &nbsp;&nbsp;&nbsp;mail : “jarmandoalt@gmail.com”,
             <br />
             &nbsp;&nbsp;&nbsp;links :
             <br />
